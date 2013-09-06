@@ -1,6 +1,6 @@
 {
   "name": "Web-Essentials-Bootstrap",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Essential components to start a static website using Bootstrap",
   "main": "Gruntfile.js",
   "scripts": {
@@ -11,7 +11,12 @@
     "url": "https://github.com/akasfei/Web-Essentials"
   },
   "author": "SFEI Systems Inc.",
-  "license": "Apache 2.0",
+  "licenses": [
+    {
+      "type": "Apache-2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0"
+    }
+  ],
   "readmeFilename": "README.md",
   "devDependencies": {
     "grunt": "~0.4.1",
