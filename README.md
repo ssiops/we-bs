@@ -1,4 +1,4 @@
-# Web-Essentials-Bootstrap [![Build Status](https://travis-ci.org/akasfei/Web-Essentials-Bootstrap.png?branch=master)](https://travis-ci.org/akasfei/Web-Essentials-Bootstrap) [![devDependency Status](https://david-dm.org/akasfei/Web-Essentials-Bootstrap/dev-status.png)](https://david-dm.org/akasfei/Web-Essentials-Bootstrap#info=devDependencies)
+# Web-Essentials-Bootstrap [![Build Status](https://travis-ci.org/ssidev/Web-Essentials-Bootstrap.png?branch=master)](https://travis-ci.org/ssidev/Web-Essentials-Bootstrap) [![devDependency Status](https://david-dm.org/ssidev/Web-Essentials-Bootstrap/dev-status.png)](https://david-dm.org/ssidev/Web-Essentials-Bootstrap#info=devDependencies)
 
 > Essential components to start a static website using Bootstrap
 
