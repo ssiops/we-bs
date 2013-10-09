@@ -7,7 +7,6 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg : grunt.file.readJSON('package.json'),
     target: 'dist',
-    production: true,
     banner: '/**\n' +
               '* <%= pkg.name %> v<%= pkg.version %>\n' +
               '* Web-Essentials development package by <%= pkg.author %>\n' +
@@ -19,7 +18,7 @@ module.exports = function(grunt) {
       options: {
         prettify: {indent: 2},
         marked: {sanitize: false},
-        production: true,
+        production: grunt.file.readJSON('package.json').production,
         data: 'src/data/*.{json,yml}',
         helpers: 'src/helpers/helper-*.js',
         layout: 'src/layouts/h5.hbs',
@@ -74,38 +73,55 @@ module.exports = function(grunt) {
           'lib/js/tab.js',
           'lib/js/affix.js'
         ],
-        dest: 'dist/js/boostrap.js'
+        dest: 'dist/js/bootstrap.js'
       }
     },
 
     uglify: {
-      options: {
-        banner: '<%= banner %>'
-      },
       bootstrap: {
-        src: ['<%= concat.bootstrap.dest %>'],
-        dest: 'dist/js/boostrap.min.js'
+        options: {
+          banner: '<%= banner %>'
+        },
+        files: {
+          'dist/js/bootstrap.min.js': '<%= concat.bootstrap.dest %>'
+        }
+      },
+      application: {
+        files: {
+          'dist/js/application.min.js': '<%= jshint.src.src %>'
+        }
       }
     },
 
-    recess: {
+    less: {
       options: {
         compile: true
       },
       bootstrap: {
-        src: ['lib/less/bootstrap.less'],
-        dest: 'dist/css/bootstrap.css'
+        files: {
+          'dist/css/bootstrap.css' : 'lib/less/bootstrap.less'
+        }
       },
-      min: {
+      bs_min: {
         options: {
-          compress: true
+          yuicompress: true
         },
-        src: ['lib/less/bootstrap.less'],
-        dest: 'dist/css/bootstrap.min.css'
+        files: {
+          'dist/css/bootstrap.min.css' : 'lib/less/bootstrap.less',
+        }
       },
       style: {
-        src: ['less/style.less'],
-        dest: 'dist/css/style.css'
+        files: {
+          'dist/css/style.css' : 'less/style.less'
+        }
+      },
+      style_min: {
+        options: {
+          yuicompress: true
+        },
+        files: {
+          'dist/css/style.min.css' : 'less/style.less'
+        }
       }
     },
 
@@ -133,15 +149,19 @@ module.exports = function(grunt) {
     watch: {
       src: {
         files: '<%= jshint.src.src %>',
-        tasks: ['jshint:src', 'copy:js']
+        tasks: ['jshint:src', 'copy:js', 'uglify:application']
       },
-      recess: {
-        files: 'less/*.less',
-        tasks: ['recess:style']
+      less: {
+        files: ['less/*.less', 'lib/less/*.less'],
+        tasks: ['less']
       },
       assemble: {
         files: 'src/**/*.hbs',
         tasks: ['assemble']
+      },
+      assets: {
+        files: 'assets/**',
+        tasks: ['copy:assets']
       }
     }
   });
@@ -153,12 +173,12 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-recess');
+  grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
-  grunt.registerTask('build', ['recess', 'concat', 'uglify', 'copy']);
+  grunt.registerTask('build', ['less', 'concat', 'uglify']);
 
-  grunt.registerTask('default', ['clean', 'jshint', 'build', 'assemble']);
+  grunt.registerTask('default', ['clean', 'jshint', 'build', 'copy', 'assemble']);
 
   grunt.registerTask('dev', ['default', 'watch']);
 
