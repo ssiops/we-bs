@@ -1,6 +1,6 @@
 {
   "name": "Web-Essentials-Bootstrap",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Essential components to start a static website using Bootstrap",
   "main": "Gruntfile.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/akasfei/Web-Essentials"
+    "url": "https://github.com/ssiops/we-bs"
   },
   "author": "SFEI Systems Inc.",
   "licenses": [
