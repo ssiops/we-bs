@@ -1,4 +1,4 @@
-# Web-Essentials-Bootstrap [![Build Status](https://travis-ci.org/ssidev/Web-Essentials-Bootstrap.png?branch=master)](https://travis-ci.org/ssidev/Web-Essentials-Bootstrap) [![devDependency Status](https://david-dm.org/ssidev/Web-Essentials-Bootstrap/dev-status.png)](https://david-dm.org/ssidev/Web-Essentials-Bootstrap#info=devDependencies)
+# Web-Essentials-Bootstrap [![Build Status](https://travis-ci.org/ssiops/we-bs)](https://travis-ci.org/ssiops/we-bs) [![devDependency Status](https://david-dm.org/ssiops/we-bs/dev-status.png)](https://david-dm.org/ssiops/we-bs#info=devDependencies)
 
 > Essential components to start a static website using Bootstrap
 
@@ -19,14 +19,14 @@ When completed, you'll be able to run the various Grunt commands provided from t
 
 ### Available Grunt commands
 
-#### Build - `grunt`
-Run `grunt` to run tests locally and compile the CSS and JavaScript into `/dist`. **Requires [recess](https://github.com/twitter/recess) and [uglify-js](https://github.com/mishoo/UglifyJS).**
+#### Build and Assemble - `grunt`
+Run tests locally, compile CSS and JavaScript, assemble templage pages into `/dist`
 
-#### Only compile CSS and JavaScript - `grunt dist`
-`grunt dist` creates the `/dist` directory with compiled files. **Requires [recess](https://github.com/twitter/recess) and [uglify-js](https://github.com/mishoo/UglifyJS).**
+#### Build - `grunt build`
+Run `grunt` to run tests locally and compile the CSS and JavaScript into `/dist`. **Requires [recess](https://github.com/twitter/recess) and [uglify-js](https://github.com/mishoo/UglifyJS).**
 
 #### Tests - `grunt test`
 Runs jshint and qunit tests headlessly in [phantomjs](https://github.com/ariya/phantomjs/) (used for CI). **Requires [phantomjs](https://github.com/ariya/phantomjs/).**
 
-#### Watch - `grunt watch`
-This is a convenience method for watching just Less files and automatically building them whenever you save.
+#### Developing - `grunt dev`
+This is a convenience method for watching files and automatically building them whenever you save.
