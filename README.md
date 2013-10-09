@@ -1,4 +1,4 @@
-# Web-Essentials-Bootstrap [![Build Status](https://travis-ci.org/ssiops/we-bs)](https://travis-ci.org/ssiops/we-bs) [![devDependency Status](https://david-dm.org/ssiops/we-bs/dev-status.png)](https://david-dm.org/ssiops/we-bs#info=devDependencies)
+# Web-Essentials-Bootstrap [![Build Status](https://api.travis-ci.org/ssiops/we-bs.png)](https://travis-ci.org/ssiops/we-bs) [![devDependency Status](https://david-dm.org/ssiops/we-bs/dev-status.png)](https://david-dm.org/ssiops/we-bs#info=devDependencies)
 
 > Essential components to start a static website using Bootstrap
 
