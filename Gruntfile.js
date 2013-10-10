@@ -73,7 +73,7 @@ module.exports = function(grunt) {
           'lib/js/tab.js',
           'lib/js/affix.js'
         ],
-        dest: 'dist/js/bootstrap.js'
+        dest: '<%= target %>/js/bootstrap.js'
       }
     },
 
@@ -83,12 +83,12 @@ module.exports = function(grunt) {
           banner: '<%= banner %>'
         },
         files: {
-          'dist/js/bootstrap.min.js': '<%= concat.bootstrap.dest %>'
+          '<%= target %>/js/bootstrap.min.js': '<%= concat.bootstrap.dest %>'
         }
       },
       application: {
         files: {
-          'dist/js/application.min.js': '<%= jshint.src.src %>'
+          '<%= target %>/js/application.min.js': '<%= jshint.src.src %>'
         }
       }
     },
@@ -99,7 +99,7 @@ module.exports = function(grunt) {
       },
       bootstrap: {
         files: {
-          'dist/css/bootstrap.css' : 'lib/less/bootstrap.less'
+          '<%= target %>/css/bootstrap.css' : 'lib/less/bootstrap.less'
         }
       },
       bs_min: {
@@ -107,12 +107,12 @@ module.exports = function(grunt) {
           yuicompress: true
         },
         files: {
-          'dist/css/bootstrap.min.css' : 'lib/less/bootstrap.less',
+          '<%= target %>/css/bootstrap.min.css' : 'lib/less/bootstrap.less',
         }
       },
       style: {
         files: {
-          'dist/css/style.css' : 'less/style.less'
+          '<%= target %>/css/style.css' : 'less/style.less'
         }
       },
       style_min: {
@@ -120,7 +120,7 @@ module.exports = function(grunt) {
           yuicompress: true
         },
         files: {
-          'dist/css/style.min.css' : 'less/style.less'
+          '<%= target %>/css/style.min.css' : 'less/style.less'
         }
       }
     },
@@ -130,19 +130,19 @@ module.exports = function(grunt) {
         expand: true,
         cwd: 'lib/fonts',
         src: '**',
-        dest: 'dist/fonts'
+        dest: '<%= target %>/fonts'
       },
       assets: {
         expand: true,
         cwd: 'assets',
         src: '**',
-        dest: 'dist/assets'
+        dest: '<%= target %>/assets'
       },
       js: {
         expand: true,
         cwd: 'js',
         src: '**',
-        dest: 'dist/js'
+        dest: '<%= target %>/js'
       },
     },
 

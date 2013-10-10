@@ -1,6 +1,6 @@
 {
   "name": "Web-Essentials-Bootstrap",
-  "version": "0.2.0",
+  "version": "0.2.2",
   "description": "Essential components to start a static website using Bootstrap",
   "main": "Gruntfile.js",
   "scripts": {
