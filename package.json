@@ -1,6 +1,6 @@
 {
   "name": "Web-Essentials-Bootstrap",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Essential components to start a static website using Bootstrap",
   "main": "Gruntfile.js",
   "scripts": {
@@ -23,11 +23,11 @@
     "grunt-contrib-clean": "~0.5.0",
     "grunt-contrib-concat": "~0.3.0",
     "grunt-contrib-copy": "~0.4.0",
-    "grunt-contrib-jshint": "~0.6.0",
-    "grunt-contrib-uglify": "~0.2.2",
+    "grunt-contrib-jshint": "~0.6.4",
+    "grunt-contrib-uglify": "~0.2.4",
     "grunt-contrib-watch": "~0.5.1",
-    "grunt-contrib-less": "~0.5.0",
-    "assemble": "~0.4.4"
+    "grunt-contrib-less": "~0.7.0",
+    "assemble": "~0.4.12"
   },
   "production": false
 }
