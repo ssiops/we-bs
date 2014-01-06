@@ -26,15 +26,16 @@
     <!-- Place anything custom after this. -->
   </head>
   <body>
+    <script src="./assets/js/jquery{{#if production}}.min{{/if}}.js"></script>
+    <script src="./js/bootstrap{{#if production}}.min{{/if}}.js"></script>
+    <script src="./js/application{{#if production}}.min{{/if}}.js"></script>
+
     {{> nav }}
 
     {{> body }}
 
     {{> footer }}
-
-    <script src="./assets/js/jquery{{#if production}}.min{{/if}}.js"></script>
-    <script src="./js/bootstrap{{#if production}}.min{{/if}}.js"></script>
-    <script src="./js/application.js"></script>
+    
   </body>
 </html>
 

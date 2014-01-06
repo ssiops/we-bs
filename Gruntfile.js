@@ -88,7 +88,11 @@ module.exports = function(grunt) {
       },
       application: {
         files: {
-          '<%= target %>/js/application.min.js': '<%= jshint.src.src %>'
+          src: '<%= jshint.src.src %>'.
+          dest: '<%= target %>/js/',
+          expand: true,
+          flatten: true,
+          ext: '.min.js'
         }
       }
     },
