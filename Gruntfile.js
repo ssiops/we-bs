@@ -87,13 +87,13 @@ module.exports = function(grunt) {
         }
       },
       application: {
-        files: {
-          src: '<%= jshint.src.src %>'.
+        files: [{
+          src: 'js/*.js',
           dest: '<%= target %>/js/',
           expand: true,
           flatten: true,
           ext: '.min.js'
-        }
+        }]
       }
     },
 
